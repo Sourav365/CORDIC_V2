@@ -65,7 +65,7 @@ module vect_mode_top#(parameter N = 16, STAGE = 16, Y_REF = 0)(
     
 endmodule
 
-/*************************** Check If y = Y_REF ***************************/
+/*************************** Check If y == Y_REF ***************************/
 /**************** Initial Angle = 0, Final Angle = Angle_out **************/
 
 module vec_single #(parameter N = 16, SHIFT_AMNT = 0, Y_REF = 0)( //X-axis as referance
@@ -76,7 +76,7 @@ module vec_single #(parameter N = 16, SHIFT_AMNT = 0, Y_REF = 0)( //X-axis as re
     
     always @(posedge clk) begin
         if(!rst) begin
-            if(y_in > Y_REF) begin //Rotate clkwise
+            if(y_in >= Y_REF) begin //Rotate clkwise
                 x_out <= x_in + (y_in >>> SHIFT_AMNT);
                 y_out <= y_in - (x_in >>> SHIFT_AMNT);
                 ang_covered_out <= ang_covered_in + micro_angle;
