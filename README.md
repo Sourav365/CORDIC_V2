@@ -4,13 +4,17 @@
 
 **After "Number of CORDIC Stages", Throughput = 100% --> output will come at every clk cycle. (As it is pipelined)**
 
-**Everything is scaled by ```x 'd100``` (Decimal value is multiplied by 100)
+**Everything is scaled by ```x 'd100``` (Decimal value is multiplied by 100)**
 
 ## Rotation Mode output
+
+
 ![image](https://github.com/Sourav365/CORDIC_V2/assets/49667585/916ca9a9-2b41-4eed-a217-3a1f2561b3de)
 
 
 ## Vectoring Mode output
+
+
 ![image](https://github.com/Sourav365/CORDIC_V2/assets/49667585/05943814-6c49-487a-a9a5-7903c95da2b4)
 
 
@@ -23,7 +27,7 @@ yf = -x0 sin(θ) + y0 cos(θ)
 ```
 ### 1. Calculate sin(θ) & cos(θ) 
 
-Assuming θ in 1st quadrant --> Clk-wise rotation
+***Assuming θ in 1st quadrant --> Clk-wise rotation
 ```
 If, x0 = 0, y0 = 1
 Then, xf = sin(θ)
