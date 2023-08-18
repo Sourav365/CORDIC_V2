@@ -100,13 +100,13 @@ module rot_single #(parameter N = 16, SHIFT_AMNT = 0)(
     
     always @(posedge clk) begin
         if(!rst) begin
-            if(angle_diff_in > 0) begin //Rotate clkwise
+            if(angle_diff_in >= 0) begin //Rotate clkwise
                 x_out <= x_in + (y_in >>> SHIFT_AMNT);
                 y_out <= y_in - (x_in >>> SHIFT_AMNT);
                 angle_diff_out <= angle_diff_in - micro_angle;
             end
             
-            else begin
+            else begin //Rotate Anti-clkwise
                 x_out <= x_in - (y_in >>> SHIFT_AMNT);
                 y_out <= y_in + (x_in >>> SHIFT_AMNT);
                 angle_diff_out <= angle_diff_in + micro_angle;
