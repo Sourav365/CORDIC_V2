@@ -31,4 +31,13 @@ Then, xf = sin(θ)
 ```
 ![image](https://github.com/Sourav365/CORDIC_V2/assets/49667585/b9ec5ba5-902c-42a8-8cc5-1c7be6059343)
 
+![image](https://github.com/Sourav365/CORDIC_V2/assets/49667585/3f58e2dd-6e99-4cdf-9cca-4f8c69945a3e)
 
+### 2. Calculate distance between two points (x1,y1) and (x2, y2)
+
+ $L=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}=\sqrt{x^2+y^2}$
+
+![image](https://github.com/Sourav365/CORDIC_V2/assets/49667585/b3065cc2-5521-4b90-9761-f117646fd193)
+
+
+ 
