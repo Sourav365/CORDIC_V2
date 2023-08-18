@@ -3,6 +3,9 @@
 **Latency/Output will be available after "Number of CORDIC Stages" clk cycle.**
 
 **After "Number of CORDIC Stages", Throughput = 100% --> output will come at every clk cycle. (As it is pipelined)**
+
+**Everything is scaled by ```x 'd100``` (Decimal value is multiplied by 100)
+
 ## Rotation Mode output
 ![image](https://github.com/Sourav365/CORDIC_V2/assets/49667585/916ca9a9-2b41-4eed-a217-3a1f2561b3de)
 
