@@ -39,5 +39,7 @@ Then, xf = sin(θ)
 
 ![image](https://github.com/Sourav365/CORDIC_V2/assets/49667585/b3065cc2-5521-4b90-9761-f117646fd193)
 
+![image](https://github.com/Sourav365/CORDIC_V2/assets/49667585/4a58ebf2-2c80-4887-afb4-aa3a8f6bfe56)
+
 
  
