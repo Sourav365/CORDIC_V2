@@ -20,10 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module vect_mode_x_ref #(parameter N = 16, STAGE = 16, X_REF = 0)(
+module vect_mode_x_ref #(parameter N = 16, STAGE = 16)(
     input  clk, rst,
-    input  signed [N-1:0] x_in, y_in,
-    output signed [N-1:0] r_out, angle_out
+    input  signed [N-1:0] x_in, y_in, X_REF,
+    output signed [N-1:0] angle_out
     );
     
     // Reg to store micro angles
@@ -54,8 +54,8 @@ module vect_mode_x_ref #(parameter N = 16, STAGE = 16, X_REF = 0)(
     generate
         for(i=0; i<STAGE; i=i+1)
             begin: vectoring_single
-            vec_single #(.SHIFT_AMNT(i), .X_REF(X_REF)) u (
-            .clk(clk), .rst(rst),
+            vec_single #(.SHIFT_AMNT(i)) u (
+            .clk(clk), .rst(rst), .X_REF(X_REF),
             .x_in(x_temp[i]), .y_in(y_temp[i]), .ang_covered_in(ang_covered[i]), .micro_angle(micro_angle[i]),
             .x_out(x_temp[i+1]), .y_out(y_temp[i+1]), .ang_covered_out(ang_covered[i+1])
             );
@@ -68,9 +68,9 @@ endmodule
 /*************************** Check If x == X_REF ***************************/
 /**************** Initial Angle = 0, Final Angle = Angle_out **************/
 
-module vec_single #(parameter N = 16, SHIFT_AMNT = 0, X_REF = 0)( //Y-axis as referance
+module vec_single #(parameter N = 16, SHIFT_AMNT = 0)( //Y-axis as referance
     input  clk, rst,
-    input  signed [N-1:0] x_in, y_in, ang_covered_in, micro_angle,
+    input  signed [N-1:0] x_in, y_in, ang_covered_in, micro_angle, X_REF,
     output reg signed [N-1:0] x_out, y_out, ang_covered_out
     );
     
