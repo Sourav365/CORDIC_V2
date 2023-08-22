@@ -50,4 +50,6 @@ Then, xf = sin(θ)
 ![image](https://github.com/Sourav365/CORDIC_V2/assets/49667585/4a58ebf2-2c80-4887-afb4-aa3a8f6bfe56)
 
 
+ ### 3. Calculation of fraction number/ invert
+ $\frac{x}{z} = \frac{z.cos(θ)}{z}=cos(θ)$
  
