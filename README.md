@@ -16,8 +16,11 @@
 ## Vectoring Mode output
 *** Only for points at 1st quadrant
 
+1. Y_REF = 0
 ![image](https://github.com/Sourav365/CORDIC_V2/assets/49667585/05943814-6c49-487a-a9a5-7903c95da2b4)
 
+1. X_REF = 0
+![image](https://github.com/Sourav365/CORDIC_V2/assets/49667585/9e3d9122-652e-4cb2-9919-fe57d27a8aca)
 
 ## Applications
 
