@@ -52,4 +52,7 @@ Then, xf = sin(θ)
 
  ### 3. Calculation of fraction number/ invert
  $\frac{x}{z} = \frac{z.cos(θ)}{z}=cos(θ)$
+
+ As, mod(cos(θ)) <= 1, so, it'll work for x<z only.
+
  
